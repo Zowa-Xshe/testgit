@@ -1,0 +1,39 @@
+学习自己使用操作系统中path的设置, 下载下面的程序安装后, 将其可执行程序所在目录都设置到path中去;(不会就上网搜);
+
+1）下载nodejs(http://nodejs.org LTS版本)并安装，安装时需要注意环境变量，安装完成后打开win+r,输入cmd进入命令行，运行node -v,npm -v看看是否安装成功
+2） 运行npm install -g gulp (编译最新版本不需要)
+3） 运行npm install -g webpack@1.x
+4 )  下载git工具，在http://gitlab.plaso.cn/（需要申请账号密码）中下载工程文件
+5） 设置ssh key 下载
+6） 下载nwjs：在网络中输入\\192.168.0.123 (账号密码：plaso/plaso)  \Share\toall\nwjs\nwjs-sdk-v0.19.5-win-ia32.zip
+\\192.168.0.123\Share\toall\nwjs\0.19.5-win-ia32 ffmpegdll.zip
+解压缩两个文件，将ffmpegdll.zip中的ffmpeg.dll替换掉nwjs-sdk-v0.19.5-win-ia32中的ffmpeg.dll
+7 )  配置nwjs的环境变量：在path路径中添加nwjs-sdk-v0.19.5-win-ia32的路径
+8） git clone下载代码；
+9） 运行git submodule init和git submodule update (该命令用来该更新submodule）
+10） 运行webpack --watch编译代码
+11） nw app -mdev -p 运行代码；
+12) 关于submodule，请每次git pull后每次运行git status查看更新结果。如果有submodule更新，请运行git submodule update;
+    每次提交git add时，请根据自己的修改add， 这样可以发现submodule没有及时更新的情况；
+
+
+准备一个资料讲解git的使用。
+
+git clone
+git checkout 
+git pull
+git push
+git rebase
+git merge
+git branch 
+
+
+需要给新人讲解的
+thumbnail， cover的区别
+
+我来统一一下两个概念
+thumbnail:是微课制作结束时所在页面的 5屏中可以显示的全部内容； 用法是 回答问题时，需要把问题的内容带到回答的微课中，那个内容就是thumbnail；
+cover:    是提供微课链接时，呈现出来的4*3的图片，我叫它封面；
+如果没有异议大家讨论和变量名统一一下；
+
+git clone代码提示文件名过长解决方法：git config --global core.longpaths true
